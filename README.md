@@ -29,19 +29,27 @@ Prepare a payload (e.g badfile) which will cause the program to call the the *se
 # Step by Step Procedure
 
 ## Step 1: Setting up the environment and compiling target C file  
+- Set permissions
 ```bash
-# setting up environments and permissions
 sudo sysctl -w kernel.randomize_va_space=0
 sudo ln -sf /bin/zsh /bin/sh
-# set user as root
+```
+- Set user to root
+```
 sudo su
-# compiling the target file as root
+```
+- Compiling the target file as root
+```
 gcc -m32 -o stack -z execstack -fno-stack-protector stack.c
 sudo chown root stack
 sudo chmod 4755 stack
-# set user as a normal user (not root)
+```
+- Set user back to seed
+```
 su seed
-# compiling the target file with "-g" for gdb
+```
+- Compiling the target file again as seed with "-g" for gdb
+```
 gcc -m32 -o stack_dbg -g -z execstack -fno-stack-protector stack.c
 ```
 
