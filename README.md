@@ -28,6 +28,10 @@ Prepare a payload (e.g badfile) which will cause the program to call the the *se
 
 # Step by Step Procedure
 
+## Step 0: Installing SEED VM on Virtual Box
+
+Install Virtual Box and then SEED-Ubuntu20.04 from [this link](https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md)
+
 ## Step 1: Setting up the environment and compiling target C file  
 - Set permissions
 ```bash
